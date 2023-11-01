@@ -1,0 +1,35 @@
+long time1 = 0;
+long time4 = 0;
+long time3 = 0;
+bool led1 = false ;
+bool led2 = false ;
+bool led3 = false ;
+void setup()
+{
+  pinMode (2, OUTPUT);
+  pinMode (3, OUTPUT);
+  pinMode (4, OUTPUT);
+}
+
+void loop()(
+{
+  long time2 = millis();
+  if(time2>=time1+1000)
+  {
+    digitalWirte(2,!led1);
+    led1=!led1;
+    time4=time2;
+  }
+  if(time2>=time4+700)
+  {
+    digitalWirte(3,!led2);
+    led2=!led2;
+    time4=time2;
+  }
+  if(time2>=time3+300)
+  {
+    digitalWirte(4,!led3);
+    led3=!led3;
+    time3=time2;
+  }
+}
